@@ -1,14 +1,14 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0fdf4;
+  background-color: #eefcf4;
   display: flex;
   justify-content: center;
   padding: 40px;
 }
 .container {
-  width: 100%;
   max-width: 700px;
+  width: 100%;
   background: white;
   border-radius: 12px;
   padding: 20px;
@@ -45,7 +45,7 @@ input {
 }
 button {
   padding: 10px 20px;
-  background-color: #34d399;
+  background-color: #22c55e;
   border: none;
   color: white;
   border-radius: 6px;

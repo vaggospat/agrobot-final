@@ -12,7 +12,7 @@ async function sendMessage() {
 
   const botMessage = document.createElement('div');
   botMessage.className = 'message bot';
-  botMessage.textContent = "🔄 Αναλύω την ερώτησή σου...";
+  botMessage.textContent = "⏳ Περιμένω απάντηση από το AgroBot...";
   chatbox.appendChild(botMessage);
   chatbox.scrollTop = chatbox.scrollHeight;
 
@@ -24,9 +24,9 @@ async function sendMessage() {
     });
 
     const data = await response.json();
-    botMessage.textContent = data.reply || "⚠️ Δεν δόθηκε απάντηση από το AgroBot.";
+    botMessage.textContent = data.reply || data.error || "⚠️ Άγνωστο σφάλμα.";
   } catch (error) {
-    botMessage.textContent = "⚠️ Σφάλμα κατά την επικοινωνία με τον AgroBot.";
+    botMessage.textContent = "❌ Σφάλμα σύνδεσης με το AgroBot.";
     console.error(error);
   }
 
